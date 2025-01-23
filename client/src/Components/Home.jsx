@@ -11,7 +11,7 @@ const Home = () => {
           <div className="text-section">
             <h1 className="name">Chintha Chandu</h1>
             <h2 className="designation">Software Developer</h2>
-            <a href="#contact" className="contact-btn">Contact Me</a>
+            <a href="Contact" className="contact-btn">Contact Me</a>
           </div>
         </div>
 
