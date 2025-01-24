@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import './Contact.css';
+import Email from './Email';
+
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({
@@ -10,6 +12,7 @@ const Contact = () => {
     mobile: '',
   });
 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
@@ -20,7 +23,7 @@ const Contact = () => {
     console.log("Form submission started");
   
     try {
-      const result = await axios.post("http://localhost:4001/contact", formValues);
+      const result = await axios.post("http://localhost:3001/contact", formValues);
       console.log("Response received:", result);
       setFormValues({
         name: "",
@@ -77,8 +80,11 @@ const Contact = () => {
               Mallukunta, Eluru Dist, Andhra Pradesh
             </li>
           </ul>
+          <div>
+          <Email/>
+          </div>
         </div>
-
+        
         
         <div className="contact-form-container">
           <form onSubmit={handleSubmit} className="contact-form">

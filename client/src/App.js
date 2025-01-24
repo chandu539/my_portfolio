@@ -8,8 +8,11 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Home from './Components/Home'; 
 
+
+
 function App() {
   return (
+    <div>
     <BrowserRouter>
       <div>
         <Navbar />
@@ -40,6 +43,7 @@ function App() {
         </Element>
       </div>
     </BrowserRouter>
+    </div>
   );
 }
 
